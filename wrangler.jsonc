@@ -1,0 +1,7 @@
+{
+  // Cloudflare Pages 项目：部署后地址 https://lect-9b1af0f2fef3.pages.dev
+  // 纯静态站点，无构建步骤；整个仓库根目录即为站点内容。
+  "name": "lect-9b1af0f2fef3",
+  "compatibility_date": "2026-11-01",
+  "pages_build_output_dir": "."
+}

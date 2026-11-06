@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>密码与数据安全 · 在线答题</title>
+<meta name="description" content="2026 经纬杯交通运输网络安全大赛培训配套练习：密码安全与数据安全在线答题。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Serif+SC:wght@400;600;700;900&display=swap">
+<style>
+:root{
+  --bg:#000;--ink:#ece8e1;--muted:#9c978f;--faint:#5f5b55;--line:#242220;--panel:#0b0b0b;--panel2:#070707;
+  --accent:#e9a46a;--teal:#6cc9c0;--ok:#63c88a;--bad:#e9866a;
+  --serif:"Noto Serif SC","Songti SC",serif;--mono:"JetBrains Mono",Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:#000;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.8}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:var(--accent)}
+code,kbd{font-family:var(--mono);font-size:.85em;background:#111;border:1px solid #222;border-radius:4px;padding:1px 6px;color:#9fe0d9;overflow-wrap:anywhere}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px 80px}
+header.top{border-bottom:1px solid var(--line);padding:40px 0 26px;margin-bottom:28px}
+.kicker{font-family:var(--mono);color:var(--accent);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+h1{font-size:46px;font-weight:900;margin:12px 0 6px;line-height:1.2}
+h1 em{font-style:normal;color:var(--faint);font-weight:400;font-size:.6em;padding:0 .12em}
+.sub{color:var(--muted);font-size:17px;margin:0}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:14px;text-decoration:none;padding:10px 16px;border-radius:8px;border:1px solid #3a3a3a;color:var(--ink);background:#0c0c0c;cursor:pointer}
+.btn:hover{border-color:var(--teal);color:#fff}
+.btn.primary{background:var(--teal);color:#000;border:0;font-weight:600}
+.btn.primary:hover{background:#8fe0d7;color:#000}
+.intro{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:30px;font-size:15.5px}
+.intro ol{margin:8px 0 0;padding-left:1.3em}.intro li{margin:4px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:0 0 22px}
+.card h2{font-size:26px;margin:0 0 4px;font-weight:800}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.tag{font-family:var(--mono);font-size:12px;border:1px solid #333;border-radius:20px;padding:2px 11px;color:var(--muted)}
+.tag.star{color:var(--accent);border-color:#5a4433}
+.body{font-size:15.5px}
+.body details{margin:12px 0}.body summary{cursor:pointer;color:var(--teal);font-family:var(--mono);font-size:14px}
+.body details[open] summary{margin-bottom:8px}
+.files{font-family:var(--mono);font-size:13px;margin:12px 0}
+.files a{display:inline-block;margin:0 10px 6px 0;padding:4px 10px;border:1px solid #2a2a2a;border-radius:6px;background:#0c0c0c;text-decoration:none}
+.files a:hover{border-color:var(--teal)}
+.answer{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.answer label{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.answer input{flex:1;min-width:240px;background:#000;border:1px solid #3a3a3a;border-radius:7px;padding:10px 12px;color:#fff;font:15px var(--mono)}
+.answer input:focus{outline:2px solid #3a6e68;border-color:var(--teal)}
+.result{font-family:var(--mono);font-size:14px;min-width:70px}
+.result.ok{color:var(--ok)}.result.bad{color:var(--bad)}
+.hint{font-family:var(--mono);font-size:12.5px;color:var(--faint);margin-top:8px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#111;color:var(--accent);font-family:var(--mono);font-size:12px}
+.tools{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:10px}
+.tools h2{font-size:24px;margin:0 0 12px}
+.tools textarea,.tools input[type=text]{width:100%;background:#000;border:1px solid #3a3a3a;border-radius:7px;padding:9px 11px;color:#fff;font:14px var(--mono);margin:6px 0}
+.tbrow{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.tbrow button{font-family:var(--mono);font-size:12.5px;background:#111;color:var(--ink);border:1px solid #333;border-radius:6px;padding:6px 11px;cursor:pointer}
+.tbrow button:hover{border-color:var(--teal);color:#fff}
+#tb-out{white-space:pre-wrap;word-break:break-all;background:#000;border:1px solid #2a2a2a;border-radius:7px;padding:10px 13px;font:13px var(--mono);min-height:44px;max-height:300px;overflow:auto;color:#fff}
+footer{color:var(--faint);font-size:13px;text-align:center;margin-top:40px;font-family:var(--mono)}
+@media(max-width:640px){h1{font-size:34px}.wrap{padding:0 14px 60px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="kicker">2026 经纬杯 · 交通运输网络安全大赛 · 配套练习</div>
+  <h1>密码安全 <em>与</em> 数据安全 · 在线答题</h1>
+  <p class="sub">5 道题，网页里就能做：下载附件自己解，或打开网页终端用真 Linux，答案当场校验。</p>
+  <div class="toolbar">
+    <a class="btn primary" id="term-btn" href="https://ctf-lect.zt2misay2.workers.dev/term/" target="_blank" rel="noopener">⌨ 打开网页终端</a>
+    <a class="btn" href="https://hanami-ume.github.io/" target="_blank" rel="noopener">📑 课程讲义</a>
+    <a class="btn" href="#tools">🧰 在线工具箱</a>
+  </div>
+</header>
+
+<div class="intro">
+  三种做题方式，任选其一：
+  <ol>
+    <li><strong>下载附件在本地解</strong>——用 CyberChef / Wireshark / OpenSSL / Python。</li>
+    <li><strong>打开网页终端</strong>——浏览器里进 Linux，附件和 openssl / tshark / python 都已就位，不用装任何东西。</li>
+    <li><strong>用本页工具箱</strong>——编码、哈希、证书、身份证校验，纯网页运行。</li>
+  </ol>
+  想好答案后，填进每题下方的方框，点「校验」即时判对错（答案只在你浏览器里比对）。
+</div>
+
+<div id="challenges"></div>
+
+<section class="tools" id="tools">
+  <h2>🧰 在线工具箱</h2>
+  <p style="font-size:14px;color:var(--muted);margin:0 0 6px">粘贴内容，点按钮；断网也能用。</p>
+  <textarea id="tb-in" rows="3" placeholder="在此粘贴密文 / 文本"></textarea>
+  <div class="tbrow">
+    <input type="text" id="tb-key" placeholder="维吉尼亚密钥 (如 KEY)" style="max-width:220px">
+    <input type="text" id="tb-n" placeholder="凯撒位移/栅栏栏数 (如 3)" style="max-width:220px">
+  </div>
+  <div class="tbrow">
+    <button data-op="auto">自动识别</button>
+    <button data-op="b64d">Base64解码</button><button data-op="b32d">Base32解码</button>
+    <button data-op="hexd">Hex解码</button><button data-op="urld">URL解码</button>
+    <button data-op="caesar">凯撒×25</button><button data-op="rot13">ROT13</button>
+    <button data-op="vig">维吉尼亚</button><button data-op="rail">栅栏</button>
+    <button data-op="morse">摩斯</button><button data-op="bacon">培根</button>
+    <button data-op="md5">MD5</button><button data-op="sha256">SHA-256</button>
+    <button data-op="idcheck">身份证校验</button>
+  </div>
+  <div id="tb-out">结果显示在这里。</div>
+</section>
+
+<footer>
+  数据为按真题考点构造的教学数据 · <a href="https://hanami-ume.github.io/">课程讲义</a> · 密码与数据安全
+</footer>
+</div>
+
+<script>
+// ---------- flags (sha256 of normalized canonical answers) ----------
+const FLAGS = {"c01": "e210741cd79150e2f4d909d7d563043617c3c91c00aac4352c1237b93a153f54", "c02": "b0348c04b758cdaad12cc858f316ffa617cebd3ab8f1d001e62d0aaa9a25b808", "c03": "3ce6679bd350b9e9d8de6a8857944e3b9a245476da9f2ce1a1cb0f0ebbcd056f", "c04": "0be40e7567134f012913fc9ef541318be2c01567d0f5093b62f0c19f7b5343d6", "c05": "c8d7edce01e387e8b82562f4e74e98a69719a6058f2170c10814cfdbde4f156c"};
+// ---------- challenges ----------
+const F = "files/";
+const CHALLENGES = [
+ {id:"01", key:"c01", title:"01 · 编码与古典密码识别", dir:"密码安全 · 古典密码", pts:10, star:false,
+  brief:"<code>samples.txt</code> 里 10 个样本，判断每个是什么编码/古典密码并还原明文。维吉尼亚密钥 <code>KEY</code>，栅栏 2 栏，凯撒自己试。",
+  detail:"看字符集：只有 0-9a-f 且偶数长度→Hex；全大写加 2-7→Base32；出现 %XX→URL 编码；只有点划→摩斯；只有 A/B 且 5 个一组→培根。多层编码就逐层解。",
+  files:[["samples.txt","01/samples.txt"]],
+  ansLabel:"把 10 条明文按顺序填（分隔随意，大小写/空格不限）：", ansPh:"明文1 明文2 … 明文10",
+  hint:"例：SM4 KEY IS NOT HERE / ATTACKATDAWN / 密码安全 / … 共 10 条，顺序同题。", norm:"alnum"},
+ {id:"02", key:"c02", title:"02 · SM2 签名与公钥匹配", dir:"密码安全 · 国密 SM2", pts:20, star:true,
+  brief:"5 条签名、4 个公钥。开发者「直接对数据本身签名而非杂凑值」。判断每条签名用哪个公钥签的。",
+  detail:"公钥 04‖x‖y；签名 rs 前 64 hex 是 r、后 64 hex 是 s（拼接不是相加）。1~4 号真正参与签名的 e = 消息字节转大整数；第 5 条是规范签名 e=SM3(ZA‖M)。运行 match.py 看哪个公钥、哪种 e 能验过。验签只需公钥。",
+  files:[["public_keys.json","02/public_keys.json"],["signatures.json","02/signatures.json"],["gm.py","02/gm.py"],["match.py","02/match.py"]],
+  ansLabel:"按 1-?,2-?,3-?,4-?,5-? 填（? 为公钥号）：", ansPh:"1-3,2-1,3-4,4-2,5-2",
+  hint:"每条签名只有一个公钥能验过；gmssl 高层 verify 会自动加 ZA+SM3，和缺陷实现对不上。", norm:"digits"},
+ {id:"03", key:"c03", title:"03 · 读懂一张数字证书", dir:"数据安全 · 数字证书", pts:15, star:false,
+  brief:"附件是几张教学证书。求 <code>server.crt</code> 的 SHA-256 指纹前 8 位（hex）。",
+  detail:"openssl x509 -in server.crt -noout -fingerprint -sha256。另外看看 Issuer/Subject/SAN/有效期/是否 CA、old_server 为何验不过、sm2_demo 的签名算法。没有 openssl 就看 certs_text.txt。",
+  files:[["server.crt","03/server.crt"],["server.cer","03/server.cer"],["root_ca.crt","03/root_ca.crt"],["old_server.crt","03/old_server.crt"],["sm2_demo.crt","03/sm2_demo.crt"],["certs_text.txt","03/certs_text.txt"]],
+  ansLabel:"SHA-256 指纹前 8 位（hex，大小写不限）：", ansPh:"例 AB12CD34",
+  hint:"指纹不是证书里的字段，是对整张 DER 字节算的哈希。", norm:"hexup"},
+ {id:"04", key:"c04", title:"04 · 流量中的明文敏感数据", dir:"数据安全 · 敏感数据识别", pts:15, star:true,
+  brief:"<code>api_traffic.pcap</code> 里有接口返回了明文身份证号和手机号。找出这个接口的 URL 路径（不含参数）。",
+  detail:"Wireshark 过滤 http，统计/HTTP/请求；或搜 cert_no / mobile。没有 Wireshark：python3 pcap_summary.py api_traffic.pcap。带 **** 的字段不算明文泄露；18 位数字要用身份证规则判断真假。",
+  files:[["api_traffic.pcap","04/api_traffic.pcap"],["pcap_summary.py","04/pcap_summary.py"]],
+  ansLabel:"泄露接口的 URL 路径（不含 ? 后参数）：", ansPh:"/xxx/xxx/xxx",
+  hint:"格式 /a/b/c，结尾不要带斜杠。", norm:"path"},
+ {id:"05", key:"c05", title:"05 · 脱敏导出与文件指纹", dir:"数据安全 · 个人信息脱敏", pts:20, star:true,
+  brief:"按 <code>policy.txt</code> 剔除不合规记录、脱敏、导出 cleaned.csv，提交它的 32 位小写 MD5。",
+  detail:"先校验后脱敏；身份证查格式+日期+校验位，手机号第二位 3~9。导出 UTF-8 无 BOM、CRLF、末尾不留空行。md5sum cleaned.csv / certutil -hashfile cleaned.csv MD5。mask_template.py 有 3 处 TODO。",
+  files:[["senders.csv","05/senders.csv"],["policy.txt","05/policy.txt"],["mask_template.py","05/mask_template.py"]],
+  ansLabel:"cleaned.csv 的 MD5（32 位小写）：", ansPh:"32 位十六进制",
+  hint:"换行用 CRLF、文件不要带 BOM、末尾不要多空行，否则 MD5 会不一样。", norm:"hexlow"},
+];
+
+// ---------- normalization (must match the Python builder) ----------
+const CJK = /[㐀-鿿豈-﫿]/;
+function norm(kind, s){
+  s = (s||"").toString();
+  if(kind==="alnum"){ let o=""; for(const ch of s.toUpperCase()){ if(/[A-Z0-9]/.test(ch)||CJK.test(ch)) o+=ch; } return o; }
+  if(kind==="digits") return s.replace(/\D/g,"");
+  if(kind==="hexup") return s.toUpperCase().replace(/[^0-9A-F]/g,"");
+  if(kind==="hexlow") return s.toLowerCase().replace(/[^0-9a-f]/g,"");
+  if(kind==="path"){ let t=s.trim().toLowerCase().replace(/\s+/g,""); if(t.length>1&&t.endsWith("/")) t=t.slice(0,-1); return t; }
+  return s.trim();
+}
+async function sha256hex(str){
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+  return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+
+// ---------- render ----------
+const box = document.getElementById("challenges");
+for(const c of CHALLENGES){
+  const el = document.createElement("section"); el.className="card"; el.id=c.key;
+  const files = c.files.map(([n,p])=>`<a href="${F}${p}" download>${n}</a>`).join("");
+  el.innerHTML = `
+    <h2>${c.title}</h2>
+    <div class="tags"><span class="tag">${c.dir}</span><span class="tag">${c.pts} 分</span>${c.star?'<span class="tag star">★ 对应真题</span>':''}</div>
+    <div class="body">
+      <p>${c.brief}</p>
+      <details><summary>提示 / 思路</summary><p>${c.detail}</p></details>
+      <div class="files">📎 ${files}</div>
+      <div class="answer">
+        <label for="in-${c.key}">${c.ansLabel}</label>
+        <input id="in-${c.key}" placeholder="${c.ansPh}" autocomplete="off">
+        <button class="btn" data-check="${c.key}">校验</button>
+        <span class="result" id="res-${c.key}"></span>
+      </div>
+      <div class="hint">${c.hint}</div>
+    </div>`;
+  box.appendChild(el);
+}
+document.querySelectorAll("[data-check]").forEach(b=>{
+  b.addEventListener("click", async ()=>{
+    const key=b.dataset.check; const c=CHALLENGES.find(x=>x.key===key);
+    const v=document.getElementById("in-"+key).value;
+    const res=document.getElementById("res-"+key);
+    const n=norm(c.norm, v);
+    if(!n){ res.className="result bad"; res.textContent="请先填写"; return; }
+    const h=await sha256hex(n);
+    if(h===FLAGS[key]){ res.className="result ok"; res.textContent="✔ 正确"; }
+    else{ res.className="result bad"; res.textContent="✘ 再想想"; }
+  });
+});
+document.querySelectorAll(".answer input").forEach(inp=>{
+  inp.addEventListener("keydown",e=>{ if(e.key==="Enter"){ const k=inp.id.slice(3); document.querySelector(`[data-check="${k}"]`).click(); } });
+});
+// hide terminal button if URL not configured
+(function(){ const t=document.getElementById("term-btn"); if(t.getAttribute("href").indexOf("__TERMINAL")===0){ t.style.display="none"; } })();
+
+// ================= toolbox =================
+(function(){
+  const $=id=>document.getElementById(id);
+  const enc=new TextEncoder(), dec=new TextDecoder("utf-8",{fatal:false});
+  const b2s=b=>dec.decode(b);
+  const b64d=s=>{s=s.replace(/\s/g,"").replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";return b2s(Uint8Array.from(atob(s),c=>c.charCodeAt(0)));};
+  const b32d=s=>{const A="ABCDEFGHIJKLMNOPQRSTUVWXYZ234567";s=s.toUpperCase().replace(/=+$/,"").replace(/\s/g,"");let bits="";for(const c of s){const i=A.indexOf(c);if(i<0)throw Error("非Base32字符 "+c);bits+=i.toString(2).padStart(5,"0");}const o=[];for(let i=0;i+8<=bits.length;i+=8)o.push(parseInt(bits.slice(i,i+8),2));return b2s(new Uint8Array(o));};
+  const hexd=s=>{s=s.replace(/[\s:]|0x/gi,"");if(!/^([0-9a-f]{2})+$/i.test(s))throw Error("非偶数长度hex");return b2s(new Uint8Array(s.match(/../g).map(h=>parseInt(h,16))));};
+  const shift=(s,k)=>s.replace(/[a-z]/gi,c=>{const b=c<="Z"?65:97;return String.fromCharCode((c.charCodeAt(0)-b+k+260)%26+b);});
+  const vig=(s,k)=>{k=(k||"").toUpperCase().replace(/[^A-Z]/g,"");if(!k)throw Error("需字母密钥");let j=0;return s.replace(/[a-z]/gi,c=>{const b=c<="Z"?65:97;const r=String.fromCharCode((c.charCodeAt(0)-b-(k.charCodeAt(j%k.length)-65)+26)%26+b);j++;return r;});};
+  const rail=(s,n)=>{n=Math.max(2,n|0);s=s.replace(/\s/g,"");const L=s.length,pat=[];let r=0,d=1;for(let i=0;i<L;i++){pat.push(r);if(r===0)d=1;else if(r===n-1)d=-1;r+=d;}const cnt=Array(n).fill(0);pat.forEach(x=>cnt[x]++);const rows=[];let p=0;for(let i=0;i<n;i++){rows.push(s.slice(p,p+cnt[i]).split(""));p+=cnt[i];}return pat.map(x=>rows[x].shift()).join("");};
+  const MO={".-":"A","-...":"B","-.-.":"C","-..":"D",".":"E","..-.":"F","--.":"G","....":"H","..":"I",".---":"J","-.-":"K",".-..":"L","--":"M","-.":"N","---":"O",".--.":"P","--.-":"Q",".-.":"R","...":"S","-":"T","..-":"U","...-":"V",".--":"W","-..-":"X","-.--":"Y","--..":"Z","-----":"0",".----":"1","..---":"2","...--":"3","....-":"4",".....":"5","-....":"6","--...":"7","---..":"8","----.":"9"};
+  const morse=s=>s.trim().split(/\s*\/\s*|\s{2,}/).map(w=>w.split(/\s+/).map(c=>MO[c]||"?").join("")).join(" ");
+  const bacon=s=>{const g=s.toUpperCase().replace(/[^AB]/g,"").match(/.{5}/g)||[];return g.map(x=>String.fromCharCode(65+parseInt(x.replace(/A/g,"0").replace(/B/g,"1"),2))).join("");};
+  const W=[7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2];
+  function idcheck(s){s=s.trim().toUpperCase();if(!/^\d{17}[\dX]$/.test(s))return "格式错：应 17 位数字+1 位数字或 X";const y=+s.slice(6,10),m=+s.slice(10,12),d=+s.slice(12,14);const dt=new Date(y,m-1,d);const okd=dt.getFullYear()===y&&dt.getMonth()===m-1&&dt.getDate()===d;const sum=W.reduce((a,w,i)=>a+w*+s[i],0);const code="10X98765432"[sum%11];return `出生 ${s.slice(6,14)}:${okd?"合法":"非法日期"}\n校验码应为 ${code}，实际 ${s[17]}:${code===s[17]?"正确":"错误"}\n结论:${okd&&code===s[17]?"格式通过":"不规范"}`;}
+  async function digest(algo,s){const buf=await crypto.subtle.digest(algo,enc.encode(s));return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,"0")).join("");}
+  // MD5 (Paul Johnston, public domain)
+  function md5(str){
+    function ad(x,y){var l=(x&0xFFFF)+(y&0xFFFF),m=(x>>16)+(y>>16)+(l>>16);return(m<<16)|(l&0xFFFF);}
+    function rl(n,c){return(n<<c)|(n>>>(32-c));}
+    function cm(q,a,b,x,s,t){return ad(rl(ad(ad(a,q),ad(x,t)),s),b);}
+    function ff(a,b,c,d,x,s,t){return cm((b&c)|((~b)&d),a,b,x,s,t);}
+    function gg(a,b,c,d,x,s,t){return cm((b&d)|(c&(~d)),a,b,x,s,t);}
+    function hh(a,b,c,d,x,s,t){return cm(b^c^d,a,b,x,s,t);}
+    function ii(a,b,c,d,x,s,t){return cm(c^(b|(~d)),a,b,x,s,t);}
+    var bytes=new TextEncoder().encode(str),len=bytes.length*8,x=[];
+    for(var k=0;k<bytes.length;k++)x[k>>2]=(x[k>>2]||0)|(bytes[k]<<((k%4)*8));
+    x[len>>5]=(x[len>>5]||0)|(0x80<<(len%32));x[(((len+64)>>>9)<<4)+14]=len;
+    var a=1732584193,b=-271733879,c=-1732584194,d=271733878;
+    for(var i=0;i<x.length;i+=16){var oa=a,ob=b,oc=c,od=d;var X=function(j){return x[i+j]|0;};
+      a=ff(a,b,c,d,X(0),7,-680876936);d=ff(d,a,b,c,X(1),12,-389564586);c=ff(c,d,a,b,X(2),17,606105819);b=ff(b,c,d,a,X(3),22,-1044525330);
+      a=ff(a,b,c,d,X(4),7,-176418897);d=ff(d,a,b,c,X(5),12,1200080426);c=ff(c,d,a,b,X(6),17,-1473231341);b=ff(b,c,d,a,X(7),22,-45705983);
+      a=ff(a,b,c,d,X(8),7,1770035416);d=ff(d,a,b,c,X(9),12,-1958414417);c=ff(c,d,a,b,X(10),17,-42063);b=ff(b,c,d,a,X(11),22,-1990404162);
+      a=ff(a,b,c,d,X(12),7,1804603682);d=ff(d,a,b,c,X(13),12,-40341101);c=ff(c,d,a,b,X(14),17,-1502002290);b=ff(b,c,d,a,X(15),22,1236535329);
+      a=gg(a,b,c,d,X(1),5,-165796510);d=gg(d,a,b,c,X(6),9,-1069501632);c=gg(c,d,a,b,X(11),14,643717713);b=gg(b,c,d,a,X(0),20,-373897302);
+      a=gg(a,b,c,d,X(5),5,-701558691);d=gg(d,a,b,c,X(10),9,38016083);c=gg(c,d,a,b,X(15),14,-660478335);b=gg(b,c,d,a,X(4),20,-405537848);
+      a=gg(a,b,c,d,X(9),5,568446438);d=gg(d,a,b,c,X(14),9,-1019803690);c=gg(c,d,a,b,X(3),14,-187363961);b=gg(b,c,d,a,X(8),20,1163531501);
+      a=gg(a,b,c,d,X(13),5,-1444681467);d=gg(d,a,b,c,X(2),9,-51403784);c=gg(c,d,a,b,X(7),14,1735328473);b=gg(b,c,d,a,X(12),20,-1926607734);
+      a=hh(a,b,c,d,X(5),4,-378558);d=hh(d,a,b,c,X(8),11,-2022574463);c=hh(c,d,a,b,X(11),16,1839030562);b=hh(b,c,d,a,X(14),23,-35309556);
+      a=hh(a,b,c,d,X(1),4,-1530992060);d=hh(d,a,b,c,X(4),11,1272893353);c=hh(c,d,a,b,X(7),16,-155497632);b=hh(b,c,d,a,X(10),23,-1094730640);
+      a=hh(a,b,c,d,X(13),4,681279174);d=hh(d,a,b,c,X(0),11,-358537222);c=hh(c,d,a,b,X(3),16,-722521979);b=hh(b,c,d,a,X(6),23,76029189);
+      a=hh(a,b,c,d,X(9),4,-640364487);d=hh(d,a,b,c,X(12),11,-421815835);c=hh(c,d,a,b,X(15),16,530742520);b=hh(b,c,d,a,X(2),23,-995338651);
+      a=ii(a,b,c,d,X(0),6,-198630844);d=ii(d,a,b,c,X(7),10,1126891415);c=ii(c,d,a,b,X(14),15,-1416354905);b=ii(b,c,d,a,X(5),21,-57434055);
+      a=ii(a,b,c,d,X(12),6,1700485571);d=ii(d,a,b,c,X(3),10,-1894986606);c=ii(c,d,a,b,X(10),15,-1051523);b=ii(b,c,d,a,X(1),21,-2054922799);
+      a=ii(a,b,c,d,X(8),6,1873313359);d=ii(d,a,b,c,X(15),10,-30611744);c=ii(c,d,a,b,X(6),15,-1560198380);b=ii(b,c,d,a,X(13),21,1309151649);
+      a=ii(a,b,c,d,X(4),6,-145523070);d=ii(d,a,b,c,X(11),10,-1120210379);c=ii(c,d,a,b,X(2),15,718787259);b=ii(b,c,d,a,X(9),21,-343485551);
+      a=ad(a,oa);b=ad(b,ob);c=ad(c,oc);d=ad(d,od);}
+    function rh(n){var s="",j;for(j=0;j<4;j++)s+=((n>>(j*8+4))&0x0F).toString(16)+((n>>(j*8))&0x0F).toString(16);return s;}
+    return rh(a)+rh(b)+rh(c)+rh(d);}
+  function ident(t){t=t.trim();const r=[];const L=t.length;
+    if(/^[.\-\s/]+$/.test(t))r.push("摩斯 → "+morse(t));
+    if(/^[ABab\s]+$/.test(t)&&t.replace(/\s/g,"").length%5===0)r.push("培根 → "+bacon(t));
+    if(/^[0-9a-f]+$/i.test(t)&&L%2===0){r.push(`Hex(${L/2}字节)`);try{const d=hexd(t);if(/^[\x20-\x7e一-鿿\s]+$/.test(d))r.push("Hex → "+d);}catch(e){}}
+    if(/%[0-9a-f]{2}/i.test(t)){try{r.push("URL → "+decodeURIComponent(t));}catch(e){}}
+    if(/^[A-Z2-7]+=*$/.test(t)&&L%8===0){try{r.push("Base32 → "+b32d(t));}catch(e){}}
+    if(/^[A-Za-z0-9+/_=-]+$/.test(t)&&L>=4&&L%4===0){try{const d=b64d(t);if(!d.includes("�"))r.push("Base64 → "+d);}catch(e){}}
+    if(/^[a-z\s,.!?'"-]+$/i.test(t)&&/[a-z]/i.test(t))r.push("疑似凯撒/ROT13/维吉尼亚/栅栏，用对应按钮");
+    return r.length?r.join("\n"):"未识别，可能多层编码。";}
+  document.querySelectorAll("[data-op]").forEach(b=>b.addEventListener("click",async()=>{
+    const s=$("tb-in").value,n=+$("tb-n").value||3,out=$("tb-out");
+    try{let r;switch(b.dataset.op){
+      case"auto":r=ident(s);break;case"b64d":r=b64d(s.trim());break;case"b32d":r=b32d(s.trim());break;case"hexd":r=hexd(s);break;case"urld":r=decodeURIComponent(s);break;
+      case"caesar":r=Array.from({length:25},(_,i)=>`右移${String(i+1).padStart(2)}: ${shift(s,-(i+1))}`).join("\n");break;
+      case"rot13":r=shift(s,13);break;case"vig":r=vig(s,$("tb-key").value);break;
+      case"rail":r=Array.from({length:5},(_,i)=>`${i+2}栏: ${rail(s,i+2)}`).join("\n");break;
+      case"morse":r=morse(s);break;case"bacon":r=bacon(s);break;
+      case"md5":r="MD5: "+md5(s);break;case"sha256":r="SHA-256: "+await digest("SHA-256",s);break;
+      case"idcheck":r=idcheck(s);break;}
+      out.textContent=r;}catch(e){out.textContent="错误: "+e.message;}
+  }));
+})();
+</script>
+</body>
+</html>

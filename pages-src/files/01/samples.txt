@@ -1,0 +1,13 @@
+L01 编码与古典密码识别 —— 样本
+每行一个样本。先判断类型（看字符集、长度、分隔符），再还原明文。
+
+01. KNGTIICLIVMSASKTEBHE6VBAJBCVERI=
+02. KXRKGIKXBKAL
+03. %E5%AF%86%E7%A0%81%E5%AE%89%E5%85%A8
+04. 706f7374616c2d64617461
+05. BAABA AAAAA AABAB AABAA
+06. CEKHPREHCTEACL
+07. nvecbeg frphevgl
+08. .-. .- .. .-.. ..--- ----- ..--- -....
+09. 6ZOB6Lev5a6i56WoLTIwMjY=
+10. WKH WUDLQ OHDYHV DW QLQH

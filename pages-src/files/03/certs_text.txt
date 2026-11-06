@@ -1,0 +1,269 @@
+======== root_ca.crt ========
+# 命令：openssl x509 -in root_ca.crt -noout -text -fingerprint -sha256
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4097 (0x1001)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = CN, O = Demo Transport Training, CN = Demo Transport Training Root CA
+        Validity
+            Not Before: Jan  1 00:00:00 2025 GMT
+            Not After : Jan  1 00:00:00 2035 GMT
+        Subject: C = CN, O = Demo Transport Training, CN = Demo Transport Training Root CA
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (3072 bit)
+                Modulus:
+                    00:c9:e0:23:3a:01:a8:82:0d:c9:e2:bd:b3:9d:de:
+                    f9:36:36:41:89:03:bf:5c:c9:04:b3:5d:e3:2e:08:
+                    44:5b:66:03:77:46:f0:14:5f:72:66:12:8b:9e:d8:
+                    3f:6f:6b:41:25:1c:b3:fd:2d:34:3a:e7:2f:fd:9e:
+                    83:44:84:f5:64:52:7d:cd:f8:e4:55:35:48:18:a2:
+                    a4:10:7e:6a:c9:97:34:5a:1e:8f:c9:38:95:b0:da:
+                    a8:9b:a5:4f:9d:b7:4b:5f:aa:2b:e9:89:d5:bf:33:
+                    3a:c4:66:de:d0:d4:00:d6:79:90:e2:4e:13:47:f2:
+                    b1:86:95:5a:b5:54:6c:4f:11:e0:14:2e:cc:ae:4f:
+                    ba:93:74:58:00:a3:5c:96:8d:e4:ed:31:95:63:f0:
+                    b8:1d:40:0c:2d:c2:87:0e:82:23:c3:92:dc:50:39:
+                    db:cd:8c:8d:ab:e5:87:d7:72:6f:d7:61:8c:1f:92:
+                    10:87:23:34:fb:04:73:e5:80:22:8c:12:47:76:20:
+                    07:35:f9:94:1a:0e:7c:3f:80:ce:0c:a3:c5:79:6c:
+                    48:0d:cd:79:0d:93:83:b8:37:e7:fe:47:10:9b:ae:
+                    33:0b:03:ff:4e:01:49:b7:1c:ac:66:09:38:5e:ca:
+                    1c:17:11:38:cd:49:6d:dc:80:6a:de:22:0f:38:e8:
+                    5f:b9:9b:4b:16:f1:46:41:e4:5e:a6:98:eb:1f:21:
+                    03:ef:38:b8:d0:c5:7e:aa:bd:6d:3c:86:de:a8:a6:
+                    96:28:81:a9:58:54:d4:bd:25:bd:f4:59:c6:94:84:
+                    e6:46:a7:6f:17:35:f5:42:3f:18:8e:c8:0b:81:88:
+                    71:1f:75:98:cd:35:b4:5f:1e:b7:bd:9b:89:5e:96:
+                    1b:40:82:dc:f2:18:6b:05:de:60:db:16:f5:ce:21:
+                    30:54:6c:0b:f1:76:a3:31:e1:70:c6:dc:ee:c5:30:
+                    ea:f9:e8:3a:a0:97:08:42:05:61:1d:9e:e6:b9:a1:
+                    1a:f2:7f:a0:2b:3d:07:ed:53:1d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:TRUE, pathlen:0
+            X509v3 Key Usage: critical
+                Certificate Sign, CRL Sign
+            X509v3 Subject Key Identifier: 
+                CA:6C:59:46:BF:F6:D5:A4:DC:5F:44:01:E1:8C:F0:9B:EC:AD:46:35
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        96:33:bb:a1:78:37:db:f7:2c:42:a5:4b:74:91:bd:5f:ef:99:
+        03:e2:27:48:55:ec:0b:5f:3e:74:61:5d:70:ab:91:4c:0f:15:
+        92:fe:24:ec:ff:55:f5:ab:84:e2:a1:24:d5:2b:31:87:6a:b1:
+        0a:01:f7:bd:94:91:db:97:86:84:9d:35:3f:12:21:c8:a5:a7:
+        8a:39:37:1a:d3:46:94:64:3d:33:3a:07:98:a3:76:0d:3d:1a:
+        54:53:e7:9f:2f:f9:34:fe:6a:61:92:d8:05:a3:c4:a0:d5:1d:
+        08:20:31:3e:a4:1c:4a:8a:39:03:52:ff:43:8f:c6:b4:60:6c:
+        a4:0f:7e:22:30:55:d7:be:fb:7d:b6:89:a3:fa:29:f8:05:a5:
+        0f:73:9d:7c:63:d5:9e:85:1b:bb:d5:c3:66:ca:74:1b:6d:49:
+        93:3a:84:89:4b:0d:24:b8:3b:44:f3:04:0d:aa:87:2d:53:70:
+        cc:ec:bd:9d:70:95:02:8c:1b:94:54:97:3f:d0:bf:82:1a:da:
+        80:5a:f3:4f:56:da:57:36:7c:29:16:8a:b6:df:12:67:06:31:
+        ce:38:a6:87:e3:f6:8f:29:63:92:93:2a:e4:df:e1:11:49:90:
+        55:bd:78:4c:bc:a9:e8:cf:c0:02:22:0d:1f:8f:94:23:ad:e1:
+        65:48:43:f8:6d:09:f0:b7:a6:99:81:fa:36:0e:a6:ee:4c:c9:
+        60:79:3b:38:1b:96:bb:cc:08:1f:9e:37:75:9e:2e:c4:1a:2b:
+        39:8e:95:f4:6d:a8:d8:63:99:60:c6:71:4f:b3:f8:c6:e8:e8:
+        1b:75:68:31:6c:df:39:39:61:2f:da:89:14:0a:29:64:3b:f7:
+        d9:64:de:86:51:c1:77:a3:96:13:51:e3:40:54:e1:38:d5:d8:
+        10:b0:87:36:8b:aa:f7:4d:14:1b:b8:de:d5:1c:06:6f:bd:82:
+        58:c1:70:99:45:63:db:5a:16:df:0b:a9:83:f1:28:39:14:aa:
+        12:20:9d:8a:6f:92
+sha256 Fingerprint=14:38:E5:31:F5:77:83:7D:5F:86:B5:55:3D:61:D4:C9:6B:72:AD:84:E4:88:C3:37:A6:93:05:23:8A:59:0A:DD
+
+======== server.crt ========
+# 命令：openssl x509 -in server.crt -noout -text -fingerprint -sha256
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2767692 (0x2a3b4c)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = CN, O = Demo Transport Training, CN = Demo Transport Training Root CA
+        Validity
+            Not Before: Mar  1 00:00:00 2026 GMT
+            Not After : Mar  1 00:00:00 2027 GMT
+        Subject: C = CN, O = Demo Rail Ticketing (Training), CN = ticket.demo-rail.test
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:95:25:a7:3b:9d:04:b9:30:df:43:af:8e:b9:d6:
+                    59:ce:1d:a6:06:fc:73:09:43:50:88:0a:98:b2:55:
+                    2b:1c:a3:ca:66:6d:9d:18:50:42:65:68:cd:10:75:
+                    26:87:d8:33:11:2e:ad:51:eb:cc:22:a0:0b:cb:40:
+                    62:cc:f0:d9:3a:df:39:5e:24:56:1b:d5:a0:68:95:
+                    1d:5c:7e:41:ea:8f:ef:4a:0c:56:c0:ae:c7:f7:17:
+                    7e:9d:6d:32:39:e5:d9:ef:13:67:7d:d8:b9:e7:73:
+                    77:31:cb:33:ba:96:ea:5d:e7:03:30:11:a2:8d:1c:
+                    2b:78:a1:bf:77:8c:df:9b:36:dd:0a:5e:6b:c4:42:
+                    38:23:22:a5:10:9b:85:51:5e:1f:d6:1b:62:f3:aa:
+                    e7:67:20:da:a1:dc:85:ee:13:24:78:7c:f8:09:a1:
+                    c8:c5:60:43:82:ff:aa:a4:c2:e0:4c:bb:f9:ea:fa:
+                    c1:bc:e7:b1:b5:7f:19:ea:d2:7e:eb:b4:6d:42:b4:
+                    a8:fc:f7:f8:4c:4f:e9:d4:b5:08:16:c3:b6:fe:8b:
+                    8b:03:62:38:c9:05:56:3a:bc:5a:4a:2e:af:07:1f:
+                    83:c1:3b:92:4d:90:89:00:2b:31:ca:df:04:8e:e4:
+                    f7:b1:75:5d:98:21:97:d0:a4:19:be:03:38:57:67:
+                    f6:75
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Subject Alternative Name: 
+                DNS:ticket.demo-rail.test, DNS:m.ticket.demo-rail.test
+            X509v3 Authority Key Identifier: 
+                CA:6C:59:46:BF:F6:D5:A4:DC:5F:44:01:E1:8C:F0:9B:EC:AD:46:35
+            X509v3 CRL Distribution Points: 
+                Full Name:
+                  URI:http://crl.demo-transport.test/root.crl
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        9b:6c:40:86:c9:eb:33:96:2c:c6:24:eb:c4:86:ce:fc:f3:29:
+        93:87:ba:51:88:26:f3:95:da:e7:d0:19:07:e4:c4:64:15:5f:
+        5d:3c:bb:ed:ca:ba:a1:aa:8c:dd:ad:b8:8d:90:4b:b4:88:73:
+        7a:b1:e1:60:2e:12:5e:db:aa:cf:14:67:c8:77:57:44:e0:a1:
+        d8:36:0c:41:fb:ff:91:fc:31:80:90:ec:b3:0d:fc:d1:0e:4d:
+        f8:82:27:8b:d7:ac:3a:3e:18:fa:7c:25:e7:77:86:dc:e6:cc:
+        d7:a9:82:f0:a8:ea:67:62:ff:ff:6b:29:ae:34:0b:8e:d6:9e:
+        d1:ff:7d:d2:ed:a9:85:c2:09:24:ec:d5:68:e8:e9:e6:f8:e8:
+        ef:ac:23:a7:96:3e:6b:a9:21:ab:36:94:2f:b1:7d:57:32:5a:
+        97:45:00:44:83:db:9d:6f:db:cd:36:50:07:7a:5c:6b:dd:3f:
+        95:20:55:08:62:8a:04:ed:b3:1e:29:e7:47:58:65:46:01:2f:
+        37:a0:1a:f7:03:b8:05:b4:57:7b:a9:04:ce:ff:92:8a:01:77:
+        9e:ba:c6:08:ce:b7:38:13:d0:a5:e2:0c:86:4d:56:b5:e9:81:
+        92:42:62:a1:c8:9a:35:e4:ca:ff:2e:2e:23:c2:1d:21:2d:55:
+        06:55:4c:6a:64:b0:e0:36:4b:0e:46:a7:c3:08:59:c9:29:f5:
+        cd:c3:0b:ef:98:8b:f1:cd:4d:b1:5a:3b:08:41:da:ea:73:bd:
+        96:cc:09:bc:58:36:cb:42:12:35:6f:2f:d2:71:ec:c3:40:c5:
+        9a:c1:59:6d:69:76:0a:90:05:a2:93:4d:84:1e:e2:c7:81:22:
+        a4:71:3a:6a:3e:fd:2d:d8:20:7a:01:f6:a3:a4:c7:50:00:2f:
+        75:11:67:ae:f5:e1:af:ac:1a:39:5f:12:cc:ef:ce:5c:77:6a:
+        ed:37:7b:22:d2:5a:fa:de:39:dd:3b:fe:b8:c5:f1:2f:e1:66:
+        84:94:1c:78:0c:e1
+sha256 Fingerprint=95:5D:1E:2B:3F:16:09:25:4D:15:B4:3B:C1:F4:46:D2:87:6C:D9:F5:25:4C:44:64:FD:B7:FC:BE:38:E3:AB:AB
+
+======== old_server.crt ========
+# 命令：openssl x509 -in old_server.crt -noout -text -fingerprint -sha256
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 7936 (0x1f00)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C = CN, O = Demo Transport Training, CN = Demo Transport Training Root CA
+        Validity
+            Not Before: Jul  1 00:00:00 2024 GMT
+            Not After : Jun 30 00:00:00 2025 GMT
+        Subject: C = CN, O = Demo Postal Service (Training), CN = parcel.demo-post.test
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:ab:2b:fa:92:c6:bb:09:b9:48:90:03:9b:5d:c8:
+                    be:50:b1:1d:45:91:a1:84:00:77:3b:cc:f9:a3:a0:
+                    a1:9a:8b:26:97:cb:93:2e:51:59:70:d9:62:ee:fc:
+                    76:a7:51:77:0b:37:bd:06:28:3f:cd:b8:09:4c:1a:
+                    67:85:ea:7b:b1:d9:7d:42:f3:cd:db:12:03:81:be:
+                    47:0e:23:d6:98:37:11:0f:94:06:32:a6:e6:9c:9a:
+                    58:0f:79:ad:5b:18:1f:fc:a9:82:97:cc:ab:ea:dd:
+                    80:0a:91:ce:09:48:06:a4:b0:04:ae:24:19:10:38:
+                    ef:2e:cd:41:3f:76:9d:e8:bd:23:d4:f1:fa:e8:58:
+                    2b:7e:46:b4:20:ed:ab:f2:40:d0:b2:ea:82:c9:9a:
+                    ae:cd:e5:94:59:b7:0f:cb:e7:a2:9b:1e:33:d7:9c:
+                    7f:c8:ae:79:0c:ec:5c:7e:a6:09:ed:47:73:79:c7:
+                    ea:99:4e:3f:d7:80:75:6b:9b:b3:c5:0c:2d:7c:ea:
+                    4e:44:09:8d:60:0e:da:c2:a4:77:67:80:25:eb:2d:
+                    50:bf:90:14:d5:01:31:68:f4:27:2f:7e:3f:4d:8e:
+                    69:e9:16:98:98:34:0c:d6:cd:67:4d:b4:03:da:78:
+                    d6:80:37:86:1b:8a:7b:89:85:32:cb:f7:5a:17:8c:
+                    de:c1
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Subject Alternative Name: 
+                DNS:parcel.demo-post.test
+            X509v3 Authority Key Identifier: 
+                CA:6C:59:46:BF:F6:D5:A4:DC:5F:44:01:E1:8C:F0:9B:EC:AD:46:35
+            X509v3 CRL Distribution Points: 
+                Full Name:
+                  URI:http://crl.demo-transport.test/root.crl
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        38:d9:0b:9c:ea:85:f0:4b:b2:f8:67:d3:2d:93:cd:5b:aa:9b:
+        04:47:5b:06:da:b7:5f:3d:b1:d6:5c:cc:74:ed:11:51:da:a4:
+        fc:f5:fb:b6:23:a1:86:e1:af:1f:11:3a:bc:32:36:6f:e6:14:
+        ec:16:46:a4:1e:30:40:0a:03:c4:fc:7e:af:e2:1a:31:a6:88:
+        a5:cf:e7:5f:e0:0d:88:54:bb:be:90:17:7d:52:08:ef:04:35:
+        67:0e:51:b9:7f:61:dc:06:fb:61:9a:4e:18:bb:04:e3:40:33:
+        1b:f9:a9:98:b6:96:04:12:c9:8a:16:d6:94:d5:6a:4f:c2:bc:
+        86:02:2d:e4:1c:8d:7f:28:c2:3b:bc:d4:5e:37:95:4b:d8:75:
+        71:77:d8:3c:bf:ae:30:9e:be:43:31:29:6a:10:89:bc:41:67:
+        7a:23:4e:f3:7f:f8:46:79:2d:13:98:9f:24:7c:ee:61:70:20:
+        f8:c7:ad:ef:3f:71:95:46:a9:f8:8e:7d:de:67:01:47:cf:97:
+        dc:8c:98:7b:d8:26:67:ff:7b:2a:e6:f1:5b:23:55:33:38:6b:
+        ac:d7:57:94:a4:88:2c:79:44:0e:1f:05:08:87:c6:d5:30:aa:
+        31:6e:ba:19:9e:df:e2:b3:12:9a:e7:d0:f6:95:21:f5:a5:e5:
+        49:75:c1:82:91:24:84:e0:e7:01:0b:22:64:f9:8c:74:90:7e:
+        14:33:cc:0b:10:34:cd:81:c0:a1:b2:cf:ba:ff:b0:f6:df:13:
+        c4:c5:f7:71:f9:74:22:cd:a2:5f:d4:0b:86:35:ba:72:a7:56:
+        16:75:15:00:06:d2:be:f5:8d:bd:ec:60:90:14:09:97:98:62:
+        07:0e:6a:19:51:5d:59:b2:92:a9:68:65:39:a0:bd:ca:1a:ac:
+        d2:14:06:da:7e:7c:41:3e:00:13:17:86:7f:39:0c:3d:49:c1:
+        b0:20:d5:68:9b:37:cf:42:71:da:71:e5:f9:bf:b1:4d:be:72:
+        3b:a2:39:a4:61:92
+sha256 Fingerprint=3E:46:54:EE:A4:62:D2:F7:C4:8E:5D:55:01:95:5A:F6:53:7A:01:8E:E3:EC:40:76:38:C6:A2:78:B5:49:77:82
+
+======== sm2_demo.crt ========
+# 命令：openssl x509 -in sm2_demo.crt -noout -text -fingerprint -sha256
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 21250 (0x5302)
+        Signature Algorithm: SM2-with-SM3
+        Issuer: C = CN, O = Demo Airport Training, CN = Demo SM2 Test CA
+        Validity
+            Not Before: Nov  6 08:46:18 2026 GMT
+            Not After : Nov  5 08:46:18 2028 GMT
+        Subject: C = CN, O = Demo Airport Training, CN = Demo SM2 Test CA
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:d4:46:41:53:01:2a:74:1e:8e:ec:4e:52:47:2c:
+                    35:44:af:97:e5:43:ea:e0:9e:42:8b:3d:6f:76:9c:
+                    22:f8:7e:ef:0d:5c:55:58:30:80:b4:cd:87:4e:86:
+                    5c:7d:42:98:65:b2:d6:64:67:dd:99:17:26:54:ed:
+                    e7:db:29:93:74
+                ASN1 OID: SM2
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                07:C0:79:8C:22:BC:02:1F:DD:72:B8:7A:0F:CF:22:7A:D7:20:24:E0
+            X509v3 Authority Key Identifier: 
+                07:C0:79:8C:22:BC:02:1F:DD:72:B8:7A:0F:CF:22:7A:D7:20:24:E0
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+    Signature Algorithm: SM2-with-SM3
+    Signature Value:
+        30:44:02:20:45:91:f9:29:8a:5d:6d:a8:f9:5c:af:6b:ef:b5:
+        67:99:e5:de:1f:ab:99:ae:20:f7:88:24:6d:0c:a4:6a:52:e8:
+        02:20:13:15:ec:9e:31:d2:7e:2a:ee:99:65:5e:ca:b6:28:e6:
+        79:d0:53:8f:72:00:30:1b:14:0a:70:e4:84:f1:10:1f
+sha256 Fingerprint=E3:4B:52:74:43:D8:7C:E2:07:8A:DA:66:B9:E1:09:21:EA:1A:29:67:D9:EF:58:AC:B3:15:6D:A8:0A:18:2F:EF
+
+======== 证书链校验（以 2026-11-15 为校验时间）========
+# 命令：openssl verify -CAfile root_ca.crt -attime 1794729600 server.crt old_server.crt
+C = CN, O = Demo Postal Service (Training), CN = parcel.demo-post.test
+error 10 at 0 depth lookup: certificate has expired
+error old_server.crt: verification failed
+server.crt: OK
